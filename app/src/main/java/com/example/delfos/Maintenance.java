@@ -37,7 +37,7 @@ public class Maintenance
                                 usuario.setPassword(result.getAsJsonPrimitive("senha").getAsString());
                                 usuario.setLevel(result.getAsJsonPrimitive("level").getAsString());
 
-                                if(usuario.getUser() != null )
+                                if(usuario.getUser() != "" )
                                 {
                                     context.startActivity( new Intent(context, Level1.class));
                                 }

@@ -9,11 +9,13 @@ import android.widget.TextView;
 
 public class Level1 extends AppCompatActivity {
 
-    private TextView userApp = findViewById(R.id.User);
+    private TextView userApp;
     private TextView levelApp;
     private TextView MisaoApp;
     private Button ranking;
     private Button completarMisao;
+    String name;
+    String leveis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,9 @@ public class Level1 extends AppCompatActivity {
         MisaoApp = findViewById(R.id.MisaoBox);
 
         User usuario = new User();
-
-        userApp.setText(usuario.getUser());
-        levelApp.setText(usuario.getLevel());
+        name = usuario.getUser();
+        leveis = usuario.getLevel();
+        userApp.setText(name);
+        levelApp.setText(leveis);
     }
 }
